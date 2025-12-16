@@ -1,4 +1,7 @@
 ﻿@page "/with-parameter/{Id:int}"
+@using Microsoft.AspNetCore.Authorization
+@attribute [Authorize]
+
 
 <h3>WithParameter: @Id</h3>
 

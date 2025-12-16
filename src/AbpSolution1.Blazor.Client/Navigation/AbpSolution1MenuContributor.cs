@@ -50,6 +50,15 @@ public class AbpSolution1MenuContributor : IMenuContributor
             icon: "fas fa-home",
             order: 1
         ));
+
+        context.Menu.AddItem(new ApplicationMenuItem(
+            "WithParameter",
+            l["Menu:WithParameter"],
+            "/with-parameter/1",
+            icon: "fas fa-list",
+            order: 2
+        ).RequireAuthenticated());
+
         if (MultiTenancyConsts.IsEnabled)
         {
             administration.SetSubItemOrder(TenantManagementMenuNames.GroupName, 1);
